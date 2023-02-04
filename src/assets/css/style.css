@@ -52,15 +52,43 @@
     margin-top:20px;
 }
 
-.get-started button{
+.start-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top:30px;
+}
+
+.get-started input{
+    height:50px;
+    width:340px;
+}
+
+.get-started button{
     background-color:#FFC93C;
     border:none;
+    display:inline;
     padding:12px 35px;
-    font-size:larger;
+    font-size: larger;
+    margin-left:5px;
 }
 
 .get-started button:hover{
     background-color:#FFEA20;
     color:#000;
+}
+
+@media(max-width:539px){
+    .start-btn{
+        display:inline-block;
+    }
+    .get-started input{
+       margin-bottom:20px;
+    }
+}
+
+@media(max-width:320px){
+    .get-started input{
+       width:275px;
+    }
 }

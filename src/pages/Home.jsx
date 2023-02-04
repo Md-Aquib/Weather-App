@@ -1,22 +1,13 @@
-import React from 'react'
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import CloudIcon from '@mui/icons-material/Cloud';
-
+import React,{useContext} from 'react'
+import GetStarted from '../components/GetStarted';
+import HomePage from '../components/HomePage';
+import WeatherContext from '../context/WeatherContext';
 
 function Home() {
+  let {city} = useContext(WeatherContext)
   return (
-    <div className="get-started">
-      <div className="container-fluid">
-        <div className="start-content">
-          <div className="icon">
-            <CloudIcon id="cloud" />
-            <WbSunnyIcon id="sun" />
-          </div>
-          <h1>Discover the Weather in Your City</h1>
-          <p>Get to know the current weather in your city.</p>
-          <button className="btn">Get Started</button>
-        </div>
-      </div>
+    <div>
+      { city ? <HomePage /> : <GetStarted /> }
     </div>
   )
 }
