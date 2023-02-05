@@ -1,0 +1,39 @@
+.report-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top:50px;
+    font-family: 'Roboto', sans-serif;
+    background:none;
+}
+
+.temp-card{
+    border: none;
+    background-image: linear-gradient(to right, #A88BEB,#F8CEEC);
+    color:#fff;
+    padding:30px;
+    border-radius:50px;
+}
+
+.temp-card .day{
+    margin-bottom:30px;
+    background-color:#f8f8f8;
+    color:#000;
+    padding:8px;
+    border-radius:20px;
+}
+
+.temp-card .card-text{
+    margin-bottom:20px;
+}
+
+.temp-card .card-title{
+    font-size:5rem;
+}
+
+@media(max-width:320px){
+    .temp-card .card-title{
+        font-size:3rem;
+    }
+}

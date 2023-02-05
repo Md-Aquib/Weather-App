@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import '../assets/css/get-started.css'
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import CloudIcon from '@mui/icons-material/Cloud';
 import WeatherContext from '../context/WeatherContext';
@@ -10,7 +11,7 @@ function GetStarted() {
       
   return (
     <div className="get-started">
-      <div className="container-fluid">
+      <div className="container-fluid start-container">
         <div className="start-content">
           <div className="icon">
             <CloudIcon id="cloud" />

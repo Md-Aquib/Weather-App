@@ -1,12 +1,11 @@
-import Home from "./pages/Home";
-import './assets/css/style.css'
+import Main from "./pages/Main";
 import {WeatherProvider} from './context/WeatherContext'
 
 function App() {
   return (
     <div className="App">
       <WeatherProvider>
-        <Home />
+        <Main />
       </WeatherProvider>
     </div>
   );
