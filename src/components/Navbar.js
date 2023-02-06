@@ -14,7 +14,7 @@ function Navbar() {
             <CloudIcon id="logo-cloud" />
             <WbSunnyIcon id="logo-sun" />
           </div>
-          <h5>San Fransisco</h5>
+          <h5>{city}</h5>
           <label className="switch">
             <input type="checkbox" />
             <span className="slider round">

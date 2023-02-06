@@ -7,8 +7,8 @@ function Home() {
   let {city} = useContext(WeatherContext)
   return (
     <div>
-      <HomePage />
-      {/* { city ? <HomePage /> : <GetStarted /> } */}
+      {/* <HomePage /> */}
+      { city ? <HomePage /> : <GetStarted /> }
     </div>
   )
 }

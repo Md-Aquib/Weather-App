@@ -7,15 +7,28 @@ export default WeatherContext;
 export const WeatherProvider = ({children}) => {
 
     const [city,setCity] = useState(false)
+    const [temp,setTemp] = useState('')
+    const [desc,setDesc] = useState('')
+
     
-    let cityName = (e)=>{
+    let getWeather = async(e) => {
         e.preventDefault()
-        setCity(e.target.city.value)
-    };  
+        let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${e.target.city.value}&appid=${process.env.REACT_APP_API_KEY}&units=metric`, {
+            method:'POST'
+        })
+        let data = await response.json()
+        if(response.status === 200){
+            setCity(data.name)
+            setTemp(Math.round(data.main.temp))
+            setDesc(data.weather[0].description)
+        }
+    };
 
     let contextData = {
         city,
-        cityName
+        getWeather,
+        temp,
+        desc,
     }
 
     return (

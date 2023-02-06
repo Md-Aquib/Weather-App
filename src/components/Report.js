@@ -1,7 +1,10 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import '../assets/css/report.css'
+import WeatherContext from '../context/WeatherContext';
 
 function Report() {
+    let {temp,desc} = useContext(WeatherContext) 
+    // eslint-disable-next-line
     var today = new Date;
     var options = {
         weekday: 'long',
@@ -16,7 +19,8 @@ function Report() {
             <div className="card-body">
                 <h5 className="day">{day}</h5>
                 <h5 className="card-text">Temperature</h5>
-                <h5 className="card-title">25&deg;C</h5>
+                <h5 className="card-title">{temp}&deg;C</h5>
+                <h5 className="card-text">{desc}</h5>
             </div>
         </div>
     </div>
