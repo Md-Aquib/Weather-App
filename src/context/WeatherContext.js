@@ -9,6 +9,12 @@ export const WeatherProvider = ({children}) => {
     const [city,setCity] = useState(false)
     const [temp,setTemp] = useState('')
     const [desc,setDesc] = useState('')
+    const [minTemp,setminTemp] = useState('')
+    const [maxTemp,setmaxTemp] = useState('')
+    const [pres,setPres] = useState('')
+    const [hum,setHum] = useState('')
+    const [vis,setVis] = useState('')
+    const [ws,setWs] = useState('')
 
     
     let getWeather = async(e) => {
@@ -21,6 +27,12 @@ export const WeatherProvider = ({children}) => {
             setCity(data.name)
             setTemp(Math.round(data.main.temp))
             setDesc(data.weather[0].description)
+            setminTemp(Math.round(data.main.temp_min))
+            setmaxTemp(Math.round(data.main.temp_max))
+            setPres(data.main.pressure)
+            setHum(data.main.humidity)
+            setVis(data.visibility)
+            setWs(data.wind.speed)
         }
     };
 
@@ -29,6 +41,12 @@ export const WeatherProvider = ({children}) => {
         getWeather,
         temp,
         desc,
+        minTemp,
+        maxTemp,
+        pres,
+        hum,
+        vis,
+        ws
     }
 
     return (
