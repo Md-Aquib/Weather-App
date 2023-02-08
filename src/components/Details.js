@@ -25,7 +25,7 @@ function Details() {
             <div className='col-lg-4 col-md-4 col-6'>
                 <CompareArrowsIcon className="details-icon" />
                 <h6>Pressure</h6>
-                <p>{Math.round((pres/100000)*1000)/1000} bar</p>
+                <p>{pres} mb</p>
             </div>
             <div className='col-lg-4 col-md-4 col-6'>
                 <OpacityIcon className="details-icon" />

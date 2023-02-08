@@ -6,4 +6,9 @@
     text-align: center;
     padding-top:20px;
     padding-bottom:20px;
+    width:95%;
+}
+
+.details-icon{
+    color:#0081B4;
 }
