@@ -17,6 +17,11 @@
     color:#FFEA20;
 }
 
+.navbar button{
+    background: none;
+    border: none;
+}
+
 .navbar h5{
     margin-top:8px;
 }

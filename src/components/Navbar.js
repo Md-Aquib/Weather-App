@@ -7,6 +7,8 @@ import CloudIcon from '@mui/icons-material/Cloud';
 
 function Navbar() {
 
+  let {changeCity} = useContext(WeatherContext) 
+
   const [active,setActive] = useState(false)
 
   function themeChange(){
@@ -34,7 +36,7 @@ function Navbar() {
             <CloudIcon id="logo-cloud" />
             <WbSunnyIcon id="logo-sun" />
           </div>
-          <h5 id='cityName'>{city}</h5>
+          <button onClick={changeCity}><h5 id='cityName'>{city}</h5></button>
           <label className="switch">
             <input value={active} type="checkbox" onClick={themeChange}/>
             <span className="slider round">

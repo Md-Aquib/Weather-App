@@ -36,6 +36,10 @@ export const WeatherProvider = ({children}) => {
         }
     };
 
+    let changeCity = ()=> {
+        setCity(false)
+    };
+
     let contextData = {
         city,
         getWeather,
@@ -46,7 +50,8 @@ export const WeatherProvider = ({children}) => {
         pres,
         hum,
         vis,
-        ws
+        ws,
+        changeCity
     }
 
     return (
